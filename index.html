@@ -13,9 +13,29 @@
     <p>Olá, eu sou o Willian, desenvolvedor focado em dados e tecnologia.
       Este é o meu portfólio, aqui você encontrará informações sobre meus projetos e habilidades.
     </p>
-
+    <button id="theme-toggle" aria-label="Alternar tema">
+      🌙
+    </button>
     <a href="#" class="btn">Ver meus projetos</a>
   </main>
+  <script>
+  const toggleBtn = document.getElementById("theme-toggle");
+  const body = document.body;
 
+  // Carrega tema salvo
+  const theme = localStorage.getItem("theme");
+  if (theme === "light") {
+    body.classList.add("light");
+    toggleBtn.textContent = "☀️";
+  }
+
+  toggleBtn.addEventListener("click", () => {
+    body.classList.toggle("light");
+
+    const isLight = body.classList.contains("light");
+    toggleBtn.textContent = isLight ? "☀️" : "🌙";
+    localStorage.setItem("theme", isLight ? "light" : "dark");
+  });
+</script>
 </body>
 </html>
