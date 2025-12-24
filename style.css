@@ -50,3 +50,45 @@ p {
   transform: translateY(-3px);
   box-shadow: 0 10px 25px rgba(56, 189, 248, 0.4);
 }
+
+
+/* Tablets e telas médias */
+@media (max-width: 768px) {
+  .container {
+    padding: 40px 30px;
+    border-radius: 14px;
+  }
+
+  h1 {
+    font-size: 2.1rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+}
+
+/* Celulares */
+@media (max-width: 480px) {
+  body {
+    padding: 20px;
+  }
+
+  .container {
+    width: 100%;
+    padding: 30px 20px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+  }
+
+  .btn {
+    width: 100%;
+    padding: 14px;
+  }
+}
