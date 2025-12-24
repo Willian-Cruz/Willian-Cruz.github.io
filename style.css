@@ -4,6 +4,7 @@
   box-sizing: border-box;
   font-family: 'Inter', system-ui, sans-serif;
 }
+
 :root {
   --bg: linear-gradient(135deg, #0f172a, #020617);
   --card: rgba(17, 24, 39, 0.85);
@@ -18,24 +19,28 @@
   --text: #020617;
   --primary: #0284c7;
 }
-
 body {
-  min-height: 100vh;
-  background: var(--bg);
-  color: var(--text);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background 0.4s, color 0.4s;
+    min-height: 100vh;
+    background: var(--bg);
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 
+    background 0.5s ease,
+    color 0.5s ease;
 }
-
+/* Card */
 .container {
   background: var(--card);
   padding: 50px 40px;
   border-radius: 16px;
   box-shadow: 0 20px 40px rgba(0,0,0,0.3);
   text-align: center;
+  transition: background 0.5s ease;
 }
+
+/* Botão dark/light */
 #theme-toggle {
   position: fixed;
   top: 20px;
@@ -77,11 +82,37 @@ p {
   font-weight: 600;
   border-radius: 30px;
   transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,0.2);
+  opacity: 0;
+  transition: opacity 0.3s;
 }
 
 .btn:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 25px rgba(56, 189, 248, 0.4);
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.container {
+  animation: fadeUp 0.8s ease forwards;
 }
 
 
