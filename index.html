@@ -1,107 +1,141 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
   <meta charset="UTF-8">
   <title>Portfólio | Willian</title>
+
+  <!-- CSS -->
   <link rel="stylesheet" href="/CSS/style.css">
+
+  <!-- Ícones -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-
 <body>
 
-  <button id="theme-toggle">🌙</button>
+<!-- BOTÃO TEMA -->
+<button id="theme-toggle">🌙</button>
 
-  <header class="header">
-    <h1>Willian</h1>
-    <p>Dados | SQL | Python | Power BI</p>
-  </header>
+<!-- HEADER -->
+<header class="header">
+  <h1>Willian</h1>
+  <p>SQL • Python • Power BI • Excel • Git</p>
+</header>
 
-  <section class="hero">
-    <h2>Transformando dados em decisões</h2>
-    <p>
-      Sou apaixonado por dados e resolução de problemas.
-      Desenvolvo análises e dashboards utilizando SQL, Python, Excel e Power BI.
-    </p>
-    <a href="#projects" class="btn">Ver projetos</a>
-  </section>
+<!-- HERO -->
+<section class="hero">
+  <h2>Analista de Dados focado em gerar impacto com dados</h2>
+  <p>
+    Sou apaixonado por dados e resolução de problemas.
+    Desenvolvo análises e dashboards utilizando SQL, Python, Excel e Power BI.
+  </p>
+  <a href="#projects" class="btn">Ver projetos</a>
+</section>
 
-  <section id="projects" class="projects">
-    <h2>Projetos</h2>
+<!-- ABOUT -->
 
-    <div class="projects-grid">
-      <div class="project-card">
-        <h3>Análise de Vendas</h3>
-        <p>Exploração e visualização de dados de vendas com Python.</p>
-        <span>Python • Pandas • SQL</span>
-        <a href="#">Ver no GitHub</a>
-      </div>
+<section class="about">
+  <h2>Sobre mim</h2>
+  <p>
+    Estou em transição para a área de dados, com foco em análise e engenharia.
+    Tenho experiência prática com SQL, Python e Power BI, desenvolvendo projetos
+    que simulam cenários reais de negócio.
+  </p>
 
-      <div class="project-card">
-        <h3>Dashboard de RH</h3>
-        <p>Análise de turnover e performance com Power BI.</p>
-        <span>Power BI • Excel</span>
-        <a href="#">Ver projeto</a>
-      </div>
+  <p>
+    Meu objetivo é transformar dados em decisões estratégicas e gerar impacto real.
+  </p>
+</section>
 
-      <div class="project-card">
-        <h3>Pipeline de Dados</h3>
-        <p>ETL automatizado com Python e banco de dados.</p>
-        <span>Python • SQL</span>
-        <a href="https://github.com/Willian-Cruz/Projeto_etl_vagas">Ver no GitHub</a>
-      </div>
-    </div>
-  </section>
+<!-- PROJETOS -->
+<section id="projects" class="projects">
+  <h2>Projetos</h2>
 
-  <section class="skills">
-  <h2>Habilidades</h2>
+  <div class="projects-grid">
 
-  <div class="skills-grid">
-    <div class="skill">
-      <i class="fas fa-database"></i>
-      <span>SQL</span>
+    <div class="project-card">
+      <h3>Análise de Vendas</h3>
+      <p>Exploração de dados com Python e geração de insights.</p>
+      <span>Python • Pandas • SQL</span>
+      <a href="#">Ver projeto</a>
     </div>
 
-    <div class="skill">
-      <i class="fab fa-python"></i>
-      <span>Python</span>
+    <div class="project-card">
+      <h3>Dashboard de RH</h3>
+      <p>Análise de turnover e indicadores.</p>
+      <span>Power BI • Excel</span>
+      <a href="#">Ver projeto</a>
     </div>
 
-    <div class="skill">
-      <i class="fas fa-table"></i>
-      <span>Pandas</span>
+    <div class="project-card">
+      <h3>Pipeline de Dados</h3>
+      <p>ETL automatizado com Python.</p>
+      <span>Python • SQL</span>
+      <a href="#">Ver projeto</a>
     </div>
 
-    <div class="skill">
-      <i class="fas fa-chart-line"></i>
-      <span>Power BI</span>
-    </div>
-
-    <div class="skill">
-      <i class="fas fa-file-excel"></i>
-      <span>Excel</span>
-    </div>
-
-    <div class="skill">
-      <i class="fab fa-git-alt"></i>
-      <span>Git</span>
-    </div>
   </div>
 </section>
 
-  <section class="contact">
-    <h2>Contato</h2>
-    <p>Vamos conversar? 👇</p>
-    <a href="https://www.linkedin.com/in/williandacruz/">LinkedIn</a>
-    <a href="https://github.com/Willian-Cruz">GitHub</a>
-  </section>
+<!-- SKILLS -->
+<section class="skills">
+  <h2>Habilidades</h2>
 
-  <footer>
-    <p>© 2026 - Willian</p>
-  </footer>
+  <div class="skills-grid">
 
-  <script src="/JS/script.js"></script>
+    <div class="skill" data-level="Avançado">
+      <i class="fas fa-database"></i>
+      <span>SQL</span>
+      <div class="progress"><div style="width:90%"></div></div>
+    </div>
+
+    <div class="skill" data-level="Intermediário">
+      <i class="fab fa-python"></i>
+      <span>Python</span>
+      <div class="progress"><div style="width:75%"></div></div>
+    </div>
+
+    <div class="skill" data-level="Intermediário">
+      <i class="fas fa-table"></i>
+      <span>Pandas</span>
+      <div class="progress"><div style="width:70%"></div></div>
+    </div>
+
+    <div class="skill" data-level="Intermediário">
+      <i class="fas fa-chart-line"></i>
+      <span>Power BI</span>
+      <div class="progress"><div style="width:80%"></div></div>
+    </div>
+
+    <div class="skill" data-level="Avançado">
+      <i class="fas fa-file-excel"></i>
+      <span>Excel</span>
+      <div class="progress"><div style="width:85%"></div></div>
+    </div>
+
+    <div class="skill" data-level="Intermediário">
+      <i class="fab fa-git-alt"></i>
+      <span>Git</span>
+      <div class="progress"><div style="width:70%"></div></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTATO -->
+<section class="contact">
+  <h2>Contato</h2>
+  <p>Vamos conversar 👇</p>
+  <a href="https://www.linkedin.com/in/williandacruz/" target="_blank">Me chame no LinkedIn</a>
+  <a href="https://github.com/Willian-Cruz" target="_blank">Meus projetos no GitHub</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 - Willian</p>
+</footer>
+
+<script src="/JS/script.js"></script>
 </body>
-
 </html>
