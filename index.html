@@ -1,24 +1,107 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <title>Portfólio | Willian</title>
   <link rel="stylesheet" href="/CSS/style.css">
-  <link rel="stylesheet" href="/JS/script.js">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+
 <body>
 
-  <main class="container">
-    <h1>Sejam bem-vindos(as)!</h1>
-    <p>Olá, eu sou o Willian, desenvolvedor focado em dados e tecnologia.
-      Este é o meu portfólio, aqui você encontrará informações sobre meus projetos e habilidades.
+  <button id="theme-toggle">🌙</button>
+
+  <header class="header">
+    <h1>Willian</h1>
+    <p>Dados | SQL | Python | Power BI</p>
+  </header>
+
+  <section class="hero">
+    <h2>Transformando dados em decisões</h2>
+    <p>
+      Sou apaixonado por dados e resolução de problemas.
+      Desenvolvo análises e dashboards utilizando SQL, Python, Excel e Power BI.
     </p>
-    <button id="theme-toggle" aria-label="Alternar tema">
-      🌙
-    </button>
-    <a href="#" class="btn">Ver meus projetos</a>
-  </main>
-  <script src="script.js"></script>
+    <a href="#projects" class="btn">Ver projetos</a>
+  </section>
+
+  <section id="projects" class="projects">
+    <h2>Projetos</h2>
+
+    <div class="projects-grid">
+      <div class="project-card">
+        <h3>Análise de Vendas</h3>
+        <p>Exploração e visualização de dados de vendas com Python.</p>
+        <span>Python • Pandas • SQL</span>
+        <a href="#">Ver no GitHub</a>
+      </div>
+
+      <div class="project-card">
+        <h3>Dashboard de RH</h3>
+        <p>Análise de turnover e performance com Power BI.</p>
+        <span>Power BI • Excel</span>
+        <a href="#">Ver projeto</a>
+      </div>
+
+      <div class="project-card">
+        <h3>Pipeline de Dados</h3>
+        <p>ETL automatizado com Python e banco de dados.</p>
+        <span>Python • SQL</span>
+        <a href="https://github.com/Willian-Cruz/Projeto_etl_vagas">Ver no GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="skills">
+  <h2>Habilidades</h2>
+
+  <div class="skills-grid">
+    <div class="skill">
+      <i class="fas fa-database"></i>
+      <span>SQL</span>
+    </div>
+
+    <div class="skill">
+      <i class="fab fa-python"></i>
+      <span>Python</span>
+    </div>
+
+    <div class="skill">
+      <i class="fas fa-table"></i>
+      <span>Pandas</span>
+    </div>
+
+    <div class="skill">
+      <i class="fas fa-chart-line"></i>
+      <span>Power BI</span>
+    </div>
+
+    <div class="skill">
+      <i class="fas fa-file-excel"></i>
+      <span>Excel</span>
+    </div>
+
+    <div class="skill">
+      <i class="fab fa-git-alt"></i>
+      <span>Git</span>
+    </div>
+  </div>
+</section>
+
+  <section class="contact">
+    <h2>Contato</h2>
+    <p>Vamos conversar? 👇</p>
+    <a href="https://www.linkedin.com/in/williandacruz/">LinkedIn</a>
+    <a href="https://github.com/Willian-Cruz">GitHub</a>
+  </section>
+
+  <footer>
+    <p>© 2026 - Willian</p>
+  </footer>
+
+  <script src="/JS/script.js"></script>
 </body>
+
 </html>
