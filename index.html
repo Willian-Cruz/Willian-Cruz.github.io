@@ -1,134 +1,226 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>Portfólio | Willian da Cruz</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Willian da Cruz | Engenharia de Dados e Analytics Engineering</title>
+  <meta name="description" content="Willian da Cruz, trainee de BI em São Paulo, em transição para Engenharia de Dados e Analytics Engineering. Pipelines com Python, PostgreSQL, dbt e Power BI.">
+  <meta name="theme-color" content="#F3F6F8">
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="/CSS/style.css">
+  <!-- Pré-visualização do link (LinkedIn, WhatsApp). Adicione uma imagem 1200x630 em assets/og.png -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Willian da Cruz | Engenharia de Dados e Analytics Engineering">
+  <meta property="og:description" content="Pipelines de dados com Python, PostgreSQL, dbt e Power BI. Trainee de BI na CAS Tecnologia, São Paulo.">
+  <meta property="og:url" content="https://willian-cruz.github.io/">
+  <meta property="og:image" content="https://willian-cruz.github.io/assets/og.png">
 
-  <!-- Ícones -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230A6A85'/%3E%3Ctext x='16' y='22' font-size='15' font-weight='700' text-anchor='middle' fill='white' font-family='sans-serif'%3EWC%3C/text%3E%3C/svg%3E">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@700;800&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Aplica o tema salvo antes da primeira pintura, para a página não piscar -->
+  <script>
+    (function () {
+      var root = document.documentElement;
+      root.classList.add('js');
+      try {
+        var tema = localStorage.getItem('tema');
+        if (!tema) tema = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        root.dataset.theme = tema;
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="stylesheet" href="CSS/style.css">
 </head>
+
 <body>
+  <a class="skip" href="#conteudo">Ir para o conteúdo</a>
 
-<!-- BOTÃO TEMA -->
-<button id="theme-toggle">🌙</button>
-
-<!-- HEADER -->
-<header class="header">
-  <h1>Willian da Cruz</h1>
-  <p>SQL • Python • PostgreSQL • Power BI • Excel • Git</p>
-</header>
-
-<!-- HERO -->
-<section class="hero">
-  <h2>Analista e Engenheiro de Dados Júnior</h2>
-  <p>
-    Sou apaixonado por dados, tecnologia e resolução de problemas.
-    Construo pipelines ETL, dashboards e soluções orientadas a dados, desenvolvo análises utilizando Python, SQL, PostgreSQL, Excel e Power BI.
-  </p>
-  <a href="#projects" class="btn">Ver projetos</a>
-</section>
-
-<!-- ABOUT -->
-
-<section class="about">
-  <h2>Sobre mim</h2>
-  <p>
-    Atuo desenvolvendo soluções orientadas a dados com Python, SQL e PostgreSQL.
-    Tenho experiência prática na construção de pipelines ETL, modelagem de dados e desenvolvimento de dashboards.
-    Atualmente aprofundo meus conhecimentos em Engenharia de Dados e Cloud, construindo projetos que simulam desafios reais de negócio.
-  </p>
-
-  <p>
-    Meu objetivo é transformar dados em decisões estratégicas e gerar impacto real.
-  </p>
-</section>
-
-<!-- PROJETOS -->
-<section id="projects" class="projects">
-  <h2>Projetos</h2>
-
-  <div class="projects-grid">
-
-    <div class="project-card">
-      <h3>Hub Vagas</h3>
-      <p>Pipeline ETL que coleta vagas de dados em 3 portais, normaliza senioridade, localização e salário, extrai tecnologias e grava em PostgreSQL. Exportação para Excel e dashboard no Power BI, com 133 testes e CI no GitHub Actions.</p>
-      <span>Python • Playwright • PostgreSQL • Power BI</span>
-      <a href="https://github.com/Willian-Cruz/hub_vagas" target="_blank" rel="noopener">Ver projeto</a>
+  <header class="topbar">
+    <div class="wrap topbar-in">
+      <a class="brand" href="#inicio">Willian da Cruz</a>
+      <nav aria-label="Principal">
+        <ul>
+          <li><a href="#projeto">Projeto em destaque</a></li>
+          <li><a href="#projetos">Outros projetos</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+      <button class="theme" type="button" aria-label="Tema escuro" aria-pressed="false">
+        <svg class="i-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        <svg class="i-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      </button>
     </div>
+  </header>
 
-    <div class="project-card">
-      <h3>Pipeline ETL de Vagas (protótipo)</h3>
-      <p>Primeira versão do pipeline: extração simulada, tratamento com Pandas e carga em SQLite.</p>
-      <span>Python • Pandas • SQLite</span>
-      <a href="https://github.com/Willian-Cruz/Projeto_etl_vagas" target="_blank" rel="noopener">Ver projeto</a>
+  <main id="conteudo">
+
+    <!-- Abertura -->
+    <section class="hero wrap" id="inicio">
+      <div class="hero-text">
+        <h1>Dados espalhados viram indicadores em que dá para confiar.</h1>
+        <p class="lead">
+          Sou Willian da Cruz, trainee de BI na CAS Tecnologia. Participo da construção de um Data Warehouse com PostgreSQL, Python e dbt e estou em transição para Engenharia de Dados e Analytics Engineering. Vim do FP&amp;A: conheço o relatório montado à mão do lado de dentro.
+        </p>
+        <div class="actions">
+          <a class="btn btn-primary" href="https://www.linkedin.com/in/williandacruz/" rel="noopener">LinkedIn</a>
+          <a class="textlink" href="#projeto">Ver projeto em destaque</a>
+        </div>
+      </div>
+
+      <!-- Coloque sua foto em assets/foto.jpg (proporção 4:5). Sem foto, aparece o monograma. -->
+      <figure class="portrait">
+        <img src="assets/foto.jpg" width="480" height="600" alt="Foto de Willian da Cruz"
+             onerror="this.closest('.portrait').classList.add('no-photo')">
+        <span class="monogram" aria-hidden="true">WC</span>
+      </figure>
+    </section>
+
+    <!-- Projeto em destaque -->
+    <section class="case wrap" id="projeto" aria-labelledby="case-title">
+      <div class="case-intro">
+        <div class="case-text">
+          <h2 id="case-title">hub_vagas</h2>
+          <p>
+            Pipeline que coleta vagas de dados no mercado brasileiro, trata as informações e entrega um dashboard. Ele busca vagas em 3 portais com Playwright, normaliza senioridade, localização e salário, extrai as tecnologias pedidas e grava tudo em PostgreSQL. A saída vai para Excel e para o Power BI.
+          </p>
+          <p>
+            Construí por conta própria para praticar o ciclo completo, da coleta ao indicador.
+          </p>
+          <p>
+            <a class="textlink" href="https://github.com/Willian-Cruz/hub_vagas" rel="noopener">Ver código no GitHub</a>
+          </p>
+        </div>
+
+        <!-- Confirme os números: o LinkedIn cita 95 testes, o site atual cita 133 -->
+        <dl class="facts">
+          <div>
+            <dt>133</dt>
+            <dd>testes automatizados, com integração contínua no GitHub Actions</dd>
+          </div>
+          <div>
+            <dt>3</dt>
+            <dd>portais de vagas coletados, normalizados e gravados em PostgreSQL</dd>
+          </div>
+        </dl>
+      </div>
+
+      <div class="pipeline">
+        <h3>Caminho dos dados</h3>
+        <ol class="flow" aria-label="Etapas do pipeline do hub_vagas">
+          <li class="node">
+            <span class="node-step">Coleta</span>
+            <code>Playwright</code>
+            <p>3 portais de vagas do mercado brasileiro</p>
+          </li>
+          <li class="node">
+            <span class="node-step">Tratamento</span>
+            <code>Python</code>
+            <p>Normaliza senioridade, localização e salário e extrai tecnologias</p>
+          </li>
+          <li class="node node--pre">
+            <span class="node-step">Armazenamento</span>
+            <code>PostgreSQL</code>
+            <p>Vagas já tratadas, prontas para consulta</p>
+          </li>
+          <li class="node node--next">
+            <span class="node-step">Modelagem</span>
+            <code>dbt</code>
+            <p>Camada de transformação sobre os dados coletados</p>
+            <span class="node-tag">em desenvolvimento</span>
+          </li>
+          <li class="node">
+            <span class="node-step">Entrega</span>
+            <code>Power BI e Excel</code>
+            <p>Dashboard e exportação para planilha</p>
+          </li>
+        </ol>
+      </div>
+
+      <!-- Salve um print do dashboard em assets/hub_vagas_dashboard.png. Até lá, aparece o espaço reservado. -->
+      <figure class="shot">
+        <img src="assets/hub_vagas_dashboard.png" alt="Dashboard do hub_vagas no Power BI com as vagas coletadas"
+             onerror="this.closest('.shot').classList.add('is-empty')">
+        <div class="placeholder">
+          <p>Espaço para o print do dashboard no Power BI.<br>Salve a imagem como <code>assets/hub_vagas_dashboard.png</code>.</p>
+        </div>
+        <figcaption>Dashboard no Power BI com as vagas coletadas pelo pipeline.</figcaption>
+      </figure>
+    </section>
+
+    <!-- Outros projetos -->
+    <section class="wrap block" id="projetos" aria-labelledby="projetos-title">
+      <h2 id="projetos-title">Outros projetos</h2>
+      <ul class="projects">
+        <!-- Só repositórios públicos ligados a dados. Para incluir outro, copie um <li> abaixo. -->
+        <li class="project">
+          <div>
+            <h3>Pipeline ETL de vagas</h3>
+            <p>Primeira versão do pipeline do hub_vagas: extração simulada, tratamento com Pandas e carga em SQLite.</p>
+          </div>
+          <p class="project-stack">Python, Pandas, SQLite</p>
+          <a class="textlink" href="https://github.com/Willian-Cruz/Projeto_etl_vagas" rel="noopener">Ver código</a>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Sobre -->
+    <section class="wrap block" id="sobre" aria-labelledby="sobre-title">
+      <div class="about">
+        <div>
+          <h2 id="sobre-title">Sobre mim</h2>
+          <p>
+            Sou trainee de BI na CAS Tecnologia, no projeto de inovação em parceria com o Inova Talentos (IPT). Participo da construção de um Data Warehouse que consolida dados de diferentes ERPs em PostgreSQL, modelado com Python e dbt e versionado em Git, para substituir um sistema legado.
+          </p>
+          <p>
+            Antes, passei dois anos em FP&amp;A na F1RST Digital Services. Controlei a conciliação de centenas de Notas Fiscais Eletrônicas por mês, com zero recorrência de inconsistências tributárias, e automatizei a consolidação dos relatórios de pagamento.
+          </p>
+          <p>
+            Sou formado em Banco de Dados pela Impacta Tecnologia. Falo inglês e espanhol em nível profissional.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="stack-title">Ferramentas por etapa do pipeline</h3>
+          <dl class="stack">
+            <div><dt>Coleta e ETL</dt><dd>Python, Playwright, SAP ERP e sistemas legados</dd></div>
+            <div><dt>Armazenamento</dt><dd>PostgreSQL, SQLite</dd></div>
+            <div><dt>Transformação</dt><dd>SQL, Pandas, dbt</dd></div>
+            <div><dt>Visualização</dt><dd>Power BI e QlikView Excel avançado</dd></div>
+            <div><dt>Infraestrutura</dt><dd>Git e GitHub, GitHub Actions</dd></div>
+            <div class="studying"><dt>Em estudo</dt><dd>Airflow, Docker, Spark, AWS e GCP</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contato -->
+    <section class="wrap block" id="contato" aria-labelledby="contato-title">
+      <div class="contact">
+        <div>
+          <h2 id="contato-title">Vamos trocar ideia?</h2>
+          <p>Você trabalha com BI, Analytics Engineering ou projetos de inovação? Me escreva.</p>
+        </div>
+        <ul class="contact-links">
+          <li><a href="mailto:willian.adolpho95@gmail.com">E-mail <span>willian.adolpho95@gmail.com</span></a></li>
+          <li><a href="https://whatsa.me/5511966448248/?t=Ol%C3%A1%2C%20Willian%21" rel="noopener">WhatsApp <span>Abrir conversa</span></a></li>
+          <li><a href="https://www.linkedin.com/in/williandacruz/" rel="noopener">LinkedIn <span>in/williandacruz</span></a></li>
+          <li><a href="https://github.com/Willian-Cruz" rel="noopener">GitHub <span>Willian-Cruz</span></a></li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <p>© 2026 Willian da Cruz. São Paulo, SP.</p>
     </div>
+  </footer>
 
-  </div>
-</section>
-
-<!-- SKILLS -->
-<section class="skills">
-  <h2>Habilidades</h2>
-
-  <div class="skills-grid">
-
-    <div class="skill" data-level="Avançado">
-      <i class="fas fa-database"></i>
-      <span>SQL</span>
-      <div class="progress"><div style="width:90%"></div></div>
-    </div>
-
-    <div class="skill" data-level="Intermediário">
-      <i class="fab fa-python"></i>
-      <span>Python</span>
-      <div class="progress"><div style="width:75%"></div></div>
-    </div>
-
-    <div class="skill" data-level="Intermediário">
-      <i class="fas fa-table"></i>
-      <span>Pandas</span>
-      <div class="progress"><div style="width:70%"></div></div>
-    </div>
-
-    <div class="skill" data-level="Intermediário">
-      <i class="fas fa-chart-line"></i>
-      <span>Power BI</span>
-      <div class="progress"><div style="width:80%"></div></div>
-    </div>
-
-    <div class="skill" data-level="Avançado">
-      <i class="fas fa-file-excel"></i>
-      <span>Excel</span>
-      <div class="progress"><div style="width:85%"></div></div>
-    </div>
-
-    <div class="skill" data-level="Intermediário">
-      <i class="fab fa-git-alt"></i>
-      <span>Git</span>
-      <div class="progress"><div style="width:70%"></div></div>
-    </div>
-
-  </div>
-</section>
-
-<!-- CONTATO -->
-<section class="contact">
-  <h2>Contato</h2>
-  <p>Vamos conversar 👇</p>
-  <a href="https://www.linkedin.com/in/williandacruz/" target="_blank">Me chame no LinkedIn</a>
-  <a href="https://github.com/Willian-Cruz" target="_blank">Meus projetos no GitHub</a>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  <p>© 2026 - Willian da Cruz</p>
-</footer>
-
-<script src="/JS/script.js"></script>
+  <script src="JS/main.js"></script>
 </body>
 </html>
