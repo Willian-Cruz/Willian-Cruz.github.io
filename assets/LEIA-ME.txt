@@ -1,0 +1,4 @@
+Coloque aqui:
+- foto.jpg (proporção 4:5)
+- hub_vagas_dashboard.png (print do dashboard no Power BI)
+- og.png (1200x630, pré-visualização do link)
